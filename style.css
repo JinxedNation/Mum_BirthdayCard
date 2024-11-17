@@ -19,21 +19,22 @@ body {
 
 .card {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     background-color: #3b2a42;
-    max-width: 500px;
+    max-width: 600px; /* Increased for larger display */
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    height: 90vh; /* Occupy most of the viewport */
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* Slideshow Styling */
 .slideshow-top, .slideshow-bottom {
-    height: 30%; /* Top and bottom thirds of the card */
+    height: 30%;
     overflow: hidden;
 }
 
@@ -43,23 +44,18 @@ body {
     object-fit: cover;
 }
 
-h1, .personal-message, .with-love, .names {
-    font-size: 14px;
-    color: var(--highlight-color);
+/* Uniform font size for readability */
+h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+    font-size: 1.2em; /* Set a consistent font size */
+    color: var(--accent-color);
+    margin: 10px 0;
 }
 
+/* Additional styling for quote */
 .emphasis-quote {
-    font-size: 12px;
     color: var(--quote-color);
     font-style: italic;
-    margin-top: 10px;
     font-family: 'Uncial Antiqua', serif;
-}
-
-.quote-author {
-    font-size: 12px;
-    color: var(--accent-color);
-    margin-top: 5px;
 }
 
 .separator {
@@ -67,15 +63,16 @@ h1, .personal-message, .with-love, .names {
     height: 1px;
     background-color: var(--accent-color);
     width: 80%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
+/* Button styling - distinct from text */
 .return-button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
     border: none;
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 15px 25px;
+    font-size: 1em; /* Slightly smaller for button */
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
