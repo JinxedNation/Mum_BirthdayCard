@@ -29,11 +29,11 @@ body {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Evenly distribute space */
+    justify-content: space-evenly;
 }
 
 .slideshow {
-    height: 30%; /* Occupy top section */
+    height: 30%;
     overflow: hidden;
 }
 
@@ -43,9 +43,9 @@ body {
     object-fit: cover;
 }
 
-h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-    font-size: 1.5em; /* Set uniform font size */
-    margin: 10px 0; /* Add consistent spacing */
+h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 h1 {
@@ -65,10 +65,6 @@ h1 {
     color: var(--quote-color);
     font-style: italic;
     font-family: 'Uncial Antiqua', serif;
-}
-
-.quote-author {
-    margin-top: 5px;
 }
 
 .separator {
@@ -99,13 +95,13 @@ h1 {
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.3em; /* Adjust font for smaller screens */
+    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
+        font-size: 1.3em;
     }
 }
 
 @media (max-width: 480px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.2em; /* Adjust font for very small screens */
+    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
+        font-size: 1.2em;
     }
 }
