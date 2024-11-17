@@ -24,16 +24,16 @@ body {
     border-radius: 10px;
     background-color: #3b2a42;
     max-width: 600px;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    height: 90vh; /* Occupy most of the viewport */
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Evenly distribute space */
 }
 
-.slideshow-top, .slideshow-bottom {
-    height: 30%; /* Top and bottom thirds of the card */
+.slideshow {
+    height: 30%; /* Occupy top section */
     overflow: hidden;
 }
 
@@ -43,16 +43,22 @@ body {
     object-fit: cover;
 }
 
-/* Set H2 size for all main text elements */
-h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-    font-size: 1.5em; /* H2 size (approximately 24px) */
-    color: var(--accent-color);
-    margin: 10px 0;
+h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+    font-size: 1.5em; /* Set uniform font size */
+    margin: 10px 0; /* Add consistent spacing */
 }
 
 h1 {
     color: var(--highlight-color);
+}
+
+.birthday-message {
+    font-size: 1.5em;
     font-weight: bold;
+}
+
+.personal-message {
+    margin: 15px 0;
 }
 
 .emphasis-quote {
@@ -62,7 +68,6 @@ h1 {
 }
 
 .quote-author {
-    color: var(--accent-color);
     margin-top: 5px;
 }
 
@@ -71,42 +76,36 @@ h1 {
     height: 1px;
     background-color: var(--accent-color);
     width: 80%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
-/* Button Styling */
-.return-button, button {
+.return-button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
     border: none;
     padding: 10px 20px;
-    font-size: 1.2em; /* Slightly larger font size for buttons */
+    font-size: 1.2em;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
 }
 
-.return-button:hover, button:hover {
+.return-button:hover {
     background-color: var(--button-hover-color);
     transform: scale(1.05);
 }
 
-/* Responsive Design: Adjust text size for smaller screens */
+/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
-    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.3em; /* Slightly smaller for mobile */
-    }
-    .return-button, button {
-        font-size: 1.1em; /* Adjust button size */
+    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+        font-size: 1.3em; /* Adjust font for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.2em; /* Smaller text for very small screens */
-    }
-    .return-button, button {
-        font-size: 1em; /* Smaller button text for small mobile screens */
+    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+        font-size: 1.2em; /* Adjust font for very small screens */
     }
 }
