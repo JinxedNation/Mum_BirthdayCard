@@ -23,8 +23,8 @@ body {
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     background-color: #3b2a42;
-    max-width: 600px; /* Increased for larger display */
-    width: 100%;
+    max-width: 600px;
+    width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     height: 90vh;
     display: flex;
@@ -32,7 +32,6 @@ body {
     justify-content: space-between;
 }
 
-/* Slideshow Styling */
 .slideshow-top, .slideshow-bottom {
     height: 30%;
     overflow: hidden;
@@ -44,18 +43,26 @@ body {
     object-fit: cover;
 }
 
-/* Uniform font size for readability */
+/* Uniform font size for main content, scaling for readability */
 h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-    font-size: 1.2em; /* Set a consistent font size */
+    font-size: 1em; /* Default size for desktop */
     color: var(--accent-color);
     margin: 10px 0;
 }
 
-/* Additional styling for quote */
+/* Specific Styles */
+h1 {
+    color: var(--highlight-color);
+}
+
 .emphasis-quote {
     color: var(--quote-color);
     font-style: italic;
     font-family: 'Uncial Antiqua', serif;
+}
+
+.quote-author {
+    color: var(--accent-color);
 }
 
 .separator {
@@ -66,20 +73,45 @@ h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
     margin: 20px auto;
 }
 
-/* Button styling - distinct from text */
-.return-button {
+/* Button Styling */
+.return-button, button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
     border: none;
-    padding: 15px 25px;
-    font-size: 1em; /* Slightly smaller for button */
+    padding: 10px 20px;
+    font-size: 1.2em; /* Larger font size for button */
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.return-button:hover {
+.return-button:hover, button:hover {
     background-color: var(--button-hover-color);
     transform: scale(1.05);
+}
+
+/* Responsive Design: Adjust font sizes based on screen width */
+@media (max-width: 1024px) {
+    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+        font-size: 1.1em; /* Increase slightly for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+        font-size: 1.2em; /* Further increase for small screens */
+    }
+    .return-button, button {
+        font-size: 1.3em; /* Increase button size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+        font-size: 1.3em; /* Larger text for mobile readability */
+    }
+    .return-button, button {
+        font-size: 1.4em; /* Larger button text for small mobile screens */
+    }
 }
