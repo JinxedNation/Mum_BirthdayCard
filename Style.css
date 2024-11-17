@@ -4,9 +4,10 @@
     --highlight-color: #ff6a6a;
     --quote-color: #d4af37;
     --button-hover-color: #e35555;
-}
-
-body {
+  }
+  
+  /* Base Styles */
+  body {
     background-color: var(--main-bg-color);
     color: var(--accent-color);
     font-family: 'IM Fell English SC', serif;
@@ -15,9 +16,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.card {
+  }
+  
+  /* Card Styles */
+  .card {
     text-align: center;
     padding: 30px;
     border: 2px solid var(--accent-color);
@@ -27,22 +29,47 @@ body {
     width: 100%;
     line-height: 1.5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
+  }
+  
+  /* Typography */
+  h1 {
     color: var(--highlight-color);
     font-size: 1.8em;
     margin: 10px 0;
-}
-
-.personal-message {
+  }
+  
+  .personal-message {
     margin: 20px 0;
     font-size: 1.1em;
     color: var(--accent-color);
     font-family: 'Georgia', serif;
-}
-
-button {
+  }
+  
+  .emphasis-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--quote-color);
+    margin-top: 20px;
+    font-family: 'Uncial Antiqua', serif;
+  }
+  
+  .quote-author {
+    font-size: 1em;
+    color: var(--accent-color);
+    margin-top: 5px;
+  }
+  
+  /* Separator Styling */
+  .separator {
+    border: 0;
+    height: 1px;
+    background-color: var(--accent-color);
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Button Styling */
+  button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
     border: none;
@@ -52,56 +79,32 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: var(--button-hover-color);
     transform: scale(1.05);
-}
-
-/* Styling for the Inspirational Quote */
-.emphasis-quote {
-    font-style: italic;
-    font-size: 1.2em;
-    color: var(--quote-color);
-    margin-top: 20px;
-    font-family: 'Uncial Antiqua', serif;
-}
-
-.quote-author {
-    font-size: 1em;
-    color: var(--accent-color);
-    margin-top: 5px;
-}
-
-/* Separator Styling */
-.separator {
-    border: 0;
-    height: 1px;
-    background-color: var(--accent-color);
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Image Styling for Family Photo */
-.family-image-top,
-.family-image-bottom {
-    width: 100px;
+  }
+  
+  /* Image Styling */
+  .family-image-top, .family-image-bottom {
+    width: 100px; /* Adjust as necessary */
     height: auto;
     display: block;
     margin: 10px auto;
-}
-
-.family-image-bottom {
+  }
+  
+  .family-image-bottom {
     margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
     h1 {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
     .card {
-        padding: 20px;
+      padding: 20px;
     }
-}
+  }
+  
