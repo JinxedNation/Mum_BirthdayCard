@@ -85,23 +85,9 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
 }
 
 .return-button:hover {
     background-color: var(--button-hover-color);
     transform: scale(1.05);
-}
-
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
-        font-size: 1.3em;
-    }
-}
-
-@media (max-width: 480px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
-        font-size: 1.2em;
-    }
 }
