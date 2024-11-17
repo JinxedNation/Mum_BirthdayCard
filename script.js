@@ -8,7 +8,7 @@ const images = [
 
 let currentImageIndex = 0;
 
-// Function to change the image every 5 seconds for both top and bottom slideshows
+// Function to change the image every 20 seconds for both top and bottom slideshows
 function changeImage() {
     const topImageElement = document.getElementById('top-slideshow-image');
     const bottomImageElement = document.getElementById('bottom-slideshow-image');
@@ -17,11 +17,10 @@ function changeImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     const newSrc = images[currentImageIndex];
 
-    // Update images only if they exist on the current page
     if (topImageElement) topImageElement.src = newSrc;
     if (bottomImageElement) bottomImageElement.src = newSrc;
     if (singleSlideshowImage) singleSlideshowImage.src = newSrc;
 }
 
-// Set interval to change images every 5 seconds (5000 ms)
-setInterval(changeImage, 5000);
+
+setInterval(changeImage, 60000);
