@@ -19,21 +19,21 @@ body {
 
 .card {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     background-color: #3b2a42;
     max-width: 600px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    height: 90vh;
+    height: 90vh; /* Occupy most of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .slideshow-top, .slideshow-bottom {
-    height: 30%;
+    height: 30%; /* Top and bottom thirds of the card */
     overflow: hidden;
 }
 
@@ -43,16 +43,16 @@ body {
     object-fit: cover;
 }
 
-/* Uniform font size for main content, scaling for readability */
+/* Set H2 size for all main text elements */
 h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-    font-size: 1em; /* Default size for desktop */
+    font-size: 1.5em; /* H2 size (approximately 24px) */
     color: var(--accent-color);
     margin: 10px 0;
 }
 
-/* Specific Styles */
 h1 {
     color: var(--highlight-color);
+    font-weight: bold;
 }
 
 .emphasis-quote {
@@ -63,6 +63,7 @@ h1 {
 
 .quote-author {
     color: var(--accent-color);
+    margin-top: 5px;
 }
 
 .separator {
@@ -70,7 +71,7 @@ h1 {
     height: 1px;
     background-color: var(--accent-color);
     width: 80%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 /* Button Styling */
@@ -79,7 +80,7 @@ h1 {
     color: var(--main-bg-color);
     border: none;
     padding: 10px 20px;
-    font-size: 1.2em; /* Larger font size for button */
+    font-size: 1.2em; /* Slightly larger font size for buttons */
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -91,27 +92,21 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Responsive Design: Adjust font sizes based on screen width */
-@media (max-width: 1024px) {
-    h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.1em; /* Increase slightly for tablets */
-    }
-}
-
+/* Responsive Design: Adjust text size for smaller screens */
 @media (max-width: 768px) {
     h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.2em; /* Further increase for small screens */
+        font-size: 1.3em; /* Slightly smaller for mobile */
     }
     .return-button, button {
-        font-size: 1.3em; /* Increase button size for readability */
+        font-size: 1.1em; /* Adjust button size */
     }
 }
 
 @media (max-width: 480px) {
     h1, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
-        font-size: 1.3em; /* Larger text for mobile readability */
+        font-size: 1.2em; /* Smaller text for very small screens */
     }
     .return-button, button {
-        font-size: 1.4em; /* Larger button text for small mobile screens */
+        font-size: 1em; /* Smaller button text for small mobile screens */
     }
 }
