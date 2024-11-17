@@ -8,16 +8,18 @@ const images = [
 
 let currentImageIndex = 0;
 
-// Function to change the image every 20 seconds
+// Function to change the image every 30 seconds
 function changeImage() {
-    const topImageElement = document.getElementById('top-slideshow-image');
-    const bottomImageElement = document.getElementById('bottom-slideshow-image');
+    const imageElement = document.getElementById('top-slideshow-image') || document.getElementById('slideshow-image');
 
-    // Update image sources
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    topImageElement.src = images[currentImageIndex];
-    bottomImageElement.src = images[currentImageIndex];
+    if (imageElement) {
+        // Update image source
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imageElement.src = images[currentImageIndex];
+    } else {
+        console.error("Slideshow image element not found.");
+    }
 }
 
-// Set interval to change images every 20 seconds (20000 ms)
+// Set interval to change image every 30 seconds (30000 ms)
 setInterval(changeImage, 30000);
