@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="card">
-        <img src="graduation chloe.jpg" alt="Family Photo" class="family-image-top">
+        <!-- Slideshow for top image -->
+        <div class="slideshow-top">
+            <img id="top-slideshow-image" src="Images/graduation chloe.jpg" alt="Top Slideshow Image" class="slide-image">
+        </div>
         
         <h1>Happy Birthday!</h1>
-        <button aria-label="Open" onclick="window.location.href='inside_card.html'">Open Card</button>
-        
-        <img src="graduation chloe.jpg" alt="Family Photo" class="family-image-bottom">
+        <p>Click below to open your card!</p>
+        <button aria-label="Open Birthday Card" onclick="window.location.href='inside_card.html'">Open Card</button>
+
+        <!-- Slideshow for bottom image -->
+        <div class="slideshow-bottom">
+            <img id="bottom-slideshow-image" src="Images/graduation chloe.jpg" alt="Bottom Slideshow Image" class="slide-image">
+        </div>
     </div>
 </body>
 </html>
