@@ -19,27 +19,25 @@ body {
 
 .card {
     text-align: center;
-    padding: 20px;
+    padding: 5vh 5vw;
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     background-color: #3b2a42;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    box-sizing: border-box; /* Include padding and border in width and height */
-    line-height: 1.5;
+    width: 90vw; /* Adjusts to 90% of the viewport width */
+    height: 90vh; /* Adjusts to 90% of the viewport height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: auto; /* Allow scrolling if content overflows */
+    overflow: hidden; /* Prevents overflow if content scales */
 }
 
 h1 {
     color: var(--highlight-color);
-    font-size: 2em;
-    margin: 20px 0;
+    font-size: 4vw; /* Scales with viewport width */
+    margin: 2vh 0;
 }
 
 .personal-message {
-    margin: 20px 0;
-    font-size: 1.2em;
+    margin: 3vh 0;
+    font-size: 2.5vw; /* Scales with viewport width */
     color: var(--accent-color);
     font-family: 'Georgia', serif;
 }
@@ -48,8 +46,8 @@ button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
     border: none;
-    padding: 15px 25px;
-    font-size: 1.1em;
+    padding: 2vh 4vw; /* Scales padding proportionally */
+    font-size: 2.5vw; /* Scales with viewport width */
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -61,19 +59,17 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Styling for the Inspirational Quote */
 .emphasis-quote {
     font-style: italic;
-    font-size: 1.4em;
+    font-size: 2.5vw; /* Scales with viewport width */
     color: var(--quote-color);
-    margin-top: 30px;
     font-family: 'Uncial Antiqua', serif;
 }
 
 .quote-author {
-    font-size: 1.1em;
+    font-size: 1.8vw; /* Scales with viewport width */
     color: var(--accent-color);
-    margin-top: 5px;
+    margin-top: 1vh;
 }
 
 /* Separator Styling */
@@ -82,27 +78,30 @@ button:hover {
     height: 1px;
     background-color: var(--accent-color);
     width: 80%;
-    margin: 20px auto;
+    margin: 3vh auto;
 }
 
 /* Image Styling for Family Photo */
 .family-image-top, .family-image-bottom {
-    width: 150px;
+    width: 20vw; /* Scales image width with viewport */
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 2vh auto;
 }
 
-.family-image-bottom {
-    margin-top: 30px;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 6vw;
     }
-    .card {
-        padding: 10px;
+    .personal-message, .emphasis-quote, .quote-author {
+        font-size: 4vw;
+    }
+    button {
+        font-size: 4vw;
+        padding: 3vh 6vw;
+    }
+    .family-image-top, .family-image-bottom {
+        width: 30vw;
     }
 }
