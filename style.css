@@ -1,9 +1,11 @@
 :root {
     --main-bg-color: #2b1a2f;
-    --accent-color: #e3c185;
+    --accent-color: #f0e6d6; /* Lightened for better contrast */
     --highlight-color: #ff6a6a;
-    --quote-color: #d4af37;
+    --quote-color: #ffd700; /* Adjusted to a brighter gold */
+    --button-color: #ff6a6a; /* Set for uniform button color */
     --button-hover-color: #e35555;
+    --button-text-color: #2b1a2f; /* Dark button text color for contrast */
 }
 
 body {
@@ -42,17 +44,17 @@ body {
 .slide-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain;
 }
 
-/* Main Content Styling */
 h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
     font-size: 1.5em;
+    color: var(--accent-color); /* Unified text color for better visibility */
     margin: 10px 0;
 }
 
 h1 {
-    color: var(--highlight-color);
+    color: var(--highlight-color); /* Standout color for headings */
 }
 
 .birthday-message {
@@ -78,9 +80,10 @@ h1 {
     margin: 20px auto;
 }
 
-.return-button {
-    background-color: var(--highlight-color);
-    color: var(--main-bg-color);
+/* Button Styling */
+.return-button, button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     border: none;
     padding: 10px 20px;
     font-size: 1.2em;
@@ -88,13 +91,14 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    width: 80%; /* Uniform button width */
 }
 
-.return-button:hover {
+.return-button:hover, button:hover {
     background-color: var(--button-hover-color);
     transform: scale(1.05);
 }
-
 /* Responsive Design for larger tablets */
 @media (max-width: 1024px) {
     .slide-image {
