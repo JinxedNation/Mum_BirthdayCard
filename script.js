@@ -23,4 +23,4 @@ function changeImage() {
 }
 
 
-setInterval(changeImage, 60000);
+setInterval(changeImage, 120000);
