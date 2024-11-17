@@ -33,21 +33,20 @@ body {
 }
 
 .slideshow {
-    height: 30%; /* Occupy top section */
+    height: 30%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .slide-image {
     width: 100%;
-    height: auto;
-    max-height: 100%; /* Make sure the image never exceeds container height */
-    object-fit: contain; /* Adjust to contain the entire image within the frame */
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain */
 }
 
-h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+/* Main Content Styling */
+h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
     font-size: 1.5em;
     margin: 10px 0;
 }
@@ -96,15 +95,27 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Responsive Design for larger tablets */
+@media (max-width: 1024px) {
+    .slide-image {
+        height: auto;
+        max-height: 100%; /* Limit height to avoid cropping */
+    }
+
+    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
+        font-size: 1.4em;
+    }
+}
+
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
         font-size: 1.3em;
     }
 }
 
 @media (max-width: 480px) {
-    h1, .birthday-message, .personal-message, .emphasis-quote, .quote-author, .with-love, .names {
+    h1, .birthday-message, .personal-message, .emphasis-quote, .with-love, .names {
         font-size: 1.2em;
     }
 }
