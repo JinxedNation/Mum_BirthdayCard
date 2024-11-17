@@ -4,8 +4,6 @@
     --highlight-color: #ff6a6a;
     --quote-color: #d4af37;
     --button-hover-color: #e35555;
-    --base-font-size: 14px; /* Set base font size */
-    --quote-font-size: 12px; /* Set font size for quotes */
 }
 
 body {
@@ -20,102 +18,52 @@ body {
 }
 
 .card {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
     background-color: #3b2a42;
+    max-width: 500px;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slideshow {
+    width: 100%;
+    height: 33.33vh; /* Top third of the card */
     overflow: hidden;
 }
 
-.image-container-top,
-.image-container-bottom {
-    width: 100%;
-}
-
-.image-container-top {
-    height: 33.33%; /* Top third */
-}
-
-.image-container-bottom {
-    height: 20%; /* Bottom fifth */
-}
-
-.family-image {
+.slide-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.content {
-    padding: 20px;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 h1 {
     color: var(--highlight-color);
-    font-size: var(--base-font-size); /* Set to 14px */
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
-p, .personal-message {
-    font-size: var(--base-font-size); /* Ensures all paragraph text is 14px */
-    color: var(--accent-color);
-    font-family: 'Georgia', serif;
-    margin: 10px 0;
+.birthday-message, .personal-message, .with-love, .names {
+    font-size: 14px;
 }
 
-/* Specific Styles for Messages */
-.quote {
-    font-size: var(--quote-font-size); /* Set to 12px for quote text */
-    font-style: italic;
+.emphasis-quote {
+    font-size: 12px;
     color: var(--quote-color);
+    font-style: italic;
+    margin-top: 20px;
     font-family: 'Uncial Antiqua', serif;
-    margin: 10px 0;
 }
 
 .quote-author {
-    font-size: var(--quote-font-size); /* Set to 12px for quote author */
+    font-size: 12px;
     color: var(--accent-color);
-}
-
-.with-love {
-    font-size: var(--base-font-size); /* Set to 14px */
-    margin-top: 10px;
-}
-
-.names {
-    font-size: var(--base-font-size); /* Set to 14px for names */
     margin-top: 5px;
 }
 
-button {
-    background-color: var(--highlight-color);
-    color: var(--main-bg-color);
-    border: none;
-    padding: 8px 16px;
-    font-size: var(--base-font-size); /* Set button text to 14px */
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: var(--button-hover-color);
-    transform: scale(1.05);
-}
-
-/* Separator Styling */
 .separator {
     border: 0;
     height: 1px;
@@ -124,19 +72,19 @@ button:hover {
     margin: 20px auto;
 }
 
-/* Image Styling for Family Photo */
-.family-image-top, .family-image-bottom {
-    width: 100%; /* Full width for top and bottom segments */
-    height: 100%; 
-    object-fit: cover;
+.return-button {
+    background-color: var(--highlight-color);
+    color: var(--main-bg-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .content {
-        padding: 10px;
-    }
-    h1, p, .quote, .quote-author, button {
-        font-size: 14px; /* Maintain 14px font size on smaller screens */
-    }
+.return-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
 }
