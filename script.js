@@ -22,4 +22,4 @@ function changeImage() {
 }
 
 // Set interval to change image every 30 seconds (30000 ms)
-setInterval(changeImage, 15000);
+setInterval(changeImage, 8000);
